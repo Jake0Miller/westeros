@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/search', to: 'search#show', as: :search
+  get '/houses', to: 'houses#index', as: :houses
 end

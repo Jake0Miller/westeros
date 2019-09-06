@@ -1,0 +1,7 @@
+<h1><%= pluralize(@facade.houses.length, "House") %></h1>
+
+<% @facade.houses.each do |house| %>
+  <section class='house'>
+    <p>House <%= house %></p>
+  </section>
+<% end %>

@@ -8,11 +8,11 @@ class SearchFacade
   end
 
   def surname
-    @family.surname
+    family.surname
   end
 
   def members
-    @family.members
+    family.members
   end
 
   private

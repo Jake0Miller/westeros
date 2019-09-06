@@ -1,1 +1,3 @@
 <h1>House <%= @facade.surname %></h1>
+
+<h2><%= @facade.members.length pluralize(@facade.members.length, "member") %></h2>

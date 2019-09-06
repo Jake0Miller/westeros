@@ -3,16 +3,16 @@ class SearchFacade
     @house = house
   end
 
-  def family
-    @family ||= Family.new(family_data(@house)[:data][0][:attributes])
+  def house
+    @_house ||= House.new(house_data(@house)[:data][0][:attributes])
   end
 
   def surname
-    family.surname
+    house.surname
   end
 
   def members
-    family.members
+    house.members
   end
 
   private
@@ -21,7 +21,7 @@ class SearchFacade
     @_service = WesterosService.new
   end
 
-  def family_data(house)
-    @_family_data = service.family_data(house)
+  def house_data(house)
+    @_house_data = service.house_data(house)
   end
 end

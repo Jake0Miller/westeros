@@ -1,5 +1,5 @@
 class WesterosService
-  def family_data(house)
+  def house_data(house)
     get_json("house/#{house}")
   end
 

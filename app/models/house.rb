@@ -1,4 +1,4 @@
-class Family
+class House
   attr_reader :surname, :members
 
   def initialize(data)

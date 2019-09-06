@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get '/search', to: 'search#show', as: :search
   get '/houses', to: 'houses#index', as: :houses
+  get '/house', to: 'houses#show', as: :house
+  get '/kombucha', to: 'kombucha#show', as: :kombucha
 end

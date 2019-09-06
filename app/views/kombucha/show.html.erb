@@ -1,0 +1,10 @@
+<h1>Welcome to Kombucha! It is not tasy. It is known.</h1>
+
+<%= form_tag house_path, method: :get do %>
+  <section class='dropdown-select'>
+    <%= label_tag :house %>
+    <%= select_tag :house, options_for_select(houses) %>
+
+    <%= submit_tag "Get Members" %>
+  </section>
+<% end %>

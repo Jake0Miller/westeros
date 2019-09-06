@@ -1,6 +1,9 @@
 class HousesController < ApplicationController
   def index
     @facade = HousesFacade.new
-    binding.pry
+  end
+
+  def show
+    @facade = HouseFacade.new
   end
 end

@@ -7,6 +7,14 @@ class SearchFacade
     @family ||= Family.new(family_data(@house)[:data][0][:attributes])
   end
 
+  def surname
+    @family.surname
+  end
+
+  def members
+    @family.members
+  end
+
   private
 
   def service

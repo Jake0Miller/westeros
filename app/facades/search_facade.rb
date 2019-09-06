@@ -3,8 +3,8 @@ class SearchFacade
     @house = house
   end
 
-  def families
-    @families = family_data.map {|data| Family.new(data)}
+  def family
+    @family ||= Family.new(family_data(@house)[:data][0][:attributes])
   end
 
   private
@@ -13,7 +13,7 @@ class SearchFacade
     @_service = WesterosService.new
   end
 
-  def family_data
-    @_family_data = service.family_data(@house)
+  def family_data(house)
+    @_family_data = service.family_data(house)
   end
 end

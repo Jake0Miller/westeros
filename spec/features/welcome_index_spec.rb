@@ -5,7 +5,7 @@ describe 'I visit the root path' do
     visit root_path
 
     within ".dropdown-select" do
-      select "Grejoy", :from => "Family"
+      select "Greyjoy", :from => "House"
     end
 
     click_on 'Get Members'

@@ -1,3 +1,9 @@
 <h1>House <%= @facade.surname %></h1>
 
-<h2><%= @facade.members.length pluralize(@facade.members.length, "member") %></h2>
+<h2><%= pluralize(@facade.members.length, "Member") %></h2>
+
+<% @facade.members.each do |member| %>
+  <section class='member'>
+    <p><%= member %></p>
+  </section>
+<% end %>

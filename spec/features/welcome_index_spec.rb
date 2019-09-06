@@ -15,7 +15,6 @@ describe 'I visit the root path' do
 
     expect(page).to have_content("7 Members")
     expect(page).to have_css(".member", count: 7)
-    expect(page).to have_content(last_name)
-    expect(page).to_not have_content('Theon')
+    expect(page).to have_content('Theon')
   end
 end

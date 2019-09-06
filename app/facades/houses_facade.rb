@@ -17,7 +17,7 @@ class HousesFacade
 
   def members
     id = houses.find {|house| house[:name] == @name}[:id]
-    house_data(id)
+    house_data(id).map {|data| data[:name]}
   end
 
   private

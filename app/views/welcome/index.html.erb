@@ -3,7 +3,7 @@
 <%= form_tag search_path, method: :get do %>
   <section class='dropdown-select'>
     <%= label_tag :house %>
-    <%= select_tag :house, options_for_select(houses.collect{ |house| [house[0], house[1]] }) %>
+    <%= select_tag :house, options_for_select(houses.map{|house| [house[0], house[1]]}) %>
 
     <%= submit_tag "Get Members" %>
   </section>

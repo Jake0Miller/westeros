@@ -3,8 +3,8 @@ class KombuchaService
     get_json("")
   end
 
-  def family_data(house)
-    get_json("#{house}")
+  def house_data(id)
+    get_json("#{id}")
   end
 
   private

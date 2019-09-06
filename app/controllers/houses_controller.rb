@@ -1,9 +1,9 @@
 class HousesController < ApplicationController
   def index
-    @facade = HousesFacade.new
+    @facade = HousesFacade.new('all')
   end
 
   def show
-    @facade = HouseFacade.new
+    @facade = HousesFacade.new(params[:house])
   end
 end

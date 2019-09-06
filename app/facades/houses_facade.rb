@@ -1,4 +1,8 @@
 class HousesFacade
+  def initialize(name)
+    @name = name.capitalize
+  end
+
   def houses
     @houses ||= houses_data
   end
@@ -7,8 +11,13 @@ class HousesFacade
     @house_names ||= houses.each_with_object(Array.new) {|house,array| array << house[:name]}
   end
 
-  def house(name)
-    
+  def surname
+    @name
+  end
+
+  def members
+    id = houses.find {|house| house[:name] == @name}[:id]
+    house_data(id)
   end
 
   private

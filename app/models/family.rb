@@ -1,8 +1,8 @@
 class Family
-  attr_reader
+  attr_reader :surname, :members
 
-  def intiailize(data)
-    @surname = data[:name]
-    @members = data[:members].map {|member| member[:name]}
+  def initialize(api_data)
+    @surname = api_data[:name]
+    @members = api_data[:members].map {|member| member[:name]}
   end
 end
